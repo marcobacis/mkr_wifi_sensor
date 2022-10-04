@@ -5,9 +5,9 @@ BUILD_OUTPUT=./out/
 all: compile
 
 compile: mkr_wifi_sensor.ino
-	arduino-cli compile -b $(BOARD)
+	arduino-cli compile --clean -b $(BOARD)
 
-upload: compile
+upload: mkr_wifi_sensor.ino
 	arduino-cli upload -b $(BOARD) -p $(PORT)
 
 clean:
